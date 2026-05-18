@@ -1408,7 +1408,7 @@
     <div class="section-title" style="margin-top:20px;">Admin-Bereich</div>
     <div class="match-card" id="admin-info-card">
       <div style="font-size:0.9rem; line-height:1.6;">
-        Als Admin (nur Mehdi Sabraoui) kannst du:
+        Als Admin (nur Ayoub) kannst du:
         <ul style="margin:10px 0 0 20px; color:var(--text-muted);">
           <li>Endergebnisse aller Spiele eintragen</li>
           <li>K.O.-Runde befüllen (wer kommt weiter)</li>
