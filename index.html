@@ -868,11 +868,15 @@
     const local = loadLocal();
     if (local.userId && local.userName) {
       currentUserId = local.userId;
-      if (state.users && !state.users[currentUserId]) { 
-        state.users[currentUserId] = { name: local.userName, password: "alt", joinedAt: Date.now() }; 
-      }
+      
+      // DER FEHLER WURDE HIER ENTFERNT: 
+      // Die App überschreibt das Passwort nun nicht mehr mit "alt", 
+      // selbst wenn das Internet beim Starten der App mal kurz hängen sollte.
+      
       isAdmin = !!local.isAdmin;
-    } else { currentUserId = null; }
+    } else { 
+      currentUserId = null; 
+    }
     updateUserUI();
   }
 
