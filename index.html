@@ -1,14 +1,21 @@
+```html
 <!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SABRAOUI & CO. - Tippspiel beendet</title>
+    
+    <!-- Tailwind CSS Script -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Neue Schriftart 'Dancing Script' für das Made by Ayoub hinzugefügt -->
+    
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Sichere Tailwind Konfiguration (ohne IDE-Fehler) -->
     <script>
-        tailwind.config = {
+        window.tailwind = window.tailwind || {};
+        window.tailwind.config = {
             theme: {
                 extend: {
                     colors: {
@@ -39,29 +46,13 @@
             }
         }
     </script>
+    
     <style>
         body {
             background: linear-gradient(135deg, #3a0810 0%, #170205 100%);
             color: #ffffff;
             font-family: 'Inter', sans-serif;
             overflow-x: hidden;
-        }
-        
-        /* Hintergrund-Stern passend zum marokkanischen Theme */
-        .bg-star {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 150vw;
-            height: 150vw;
-            max-width: 800px;
-            max-height: 800px;
-            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M256 14.316l58.828 181.056h190.41l-154.04 111.91 58.83 181.056-154.028-111.914-154.028 111.914 58.83-181.056-154.04-111.91h190.41z" fill="none" stroke="%23006233" stroke-width="8" opacity="0.15"/></svg>');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: contain;
-            z-index: -1;
         }
 
         .glass-panel {
@@ -82,8 +73,12 @@
 </head>
 <body class="min-h-screen flex items-center justify-center p-4 sm:p-8 relative">
     
-    <!-- Background Moroccan Star -->
-    <div class="bg-star"></div>
+    <!-- Background Moroccan Star (Jetzt als sicheres HTML-SVG) -->
+    <div class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[150vw] h-[150vw] max-w-[800px] max-h-[800px] -z-10 opacity-15 pointer-events-none">
+        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+            <path d="M256 14.316l58.828 181.056h190.41l-154.04 111.91 58.83 181.056-154.028-111.914-154.028 111.914 58.83-181.056-154.04-111.91h190.41z" fill="none" stroke="#006233" stroke-width="8"/>
+        </svg>
+    </div>
 
     <!-- Main Content Container -->
     <main class="w-full max-w-lg mx-auto animate-fade-in relative z-10 pb-10">
