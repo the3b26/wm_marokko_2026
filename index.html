@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SABRAOUI & CO. - Tippspiel beendet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Neue Schriftart 'Dancing Script' für das Made by Ayoub hinzugefügt -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'maroc-red': '#511118',
+                        'maroc-dark': '#2a050a',
+                        'maroc-gold': '#dcb46a',
+                        'maroc-gold-light': '#f4d89a',
+                        'maroc-green': '#006233',
+                        'panel-light': '#6c222b',
+                        'panel-dark': '#421016',
+                    },
+                    fontFamily: {
+                        'oswald': ['Oswald', 'sans-serif'],
+                        'inter': ['Inter', 'sans-serif'],
+                        'signature': ['Dancing Script', 'cursive'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1.5s ease-out',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #3a0810 0%, #170205 100%);
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        /* Hintergrund-Stern passend zum marokkanischen Theme */
+        .bg-star {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 150vw;
+            height: 150vw;
+            max-width: 800px;
+            max-height: 800px;
+            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M256 14.316l58.828 181.056h190.41l-154.04 111.91 58.83 181.056-154.028-111.914-154.028 111.914 58.83-181.056-154.04-111.91h190.41z" fill="none" stroke="%23006233" stroke-width="8" opacity="0.15"/></svg>');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            z-index: -1;
+        }
+
+        .glass-panel {
+            background: linear-gradient(to bottom, #5d1c25, #370a11);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5), inset 0 1px 1px rgba(255,255,255,0.1);
+            border: 1px solid rgba(220, 180, 106, 0.2);
+            border-radius: 24px;
+        }
+
+        .gold-text-glow {
+            text-shadow: 0 0 15px rgba(220, 180, 106, 0.5);
+        }
+        
+        .signature-glow {
+            filter: drop-shadow(0 0 10px rgba(220, 180, 106, 0.4));
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4 sm:p-8 relative">
+    
+    <!-- Background Moroccan Star -->
+    <div class="bg-star"></div>
+
+    <!-- Main Content Container -->
+    <main class="w-full max-w-lg mx-auto animate-fade-in relative z-10 pb-10">
+        
+        <!-- Main Card -->
+        <div class="glass-panel p-8 sm:p-10 text-center relative overflow-hidden">
+            
+            <!-- Dezenter Leuchteffekt oben -->
+            <div class="absolute top-0 left-1/4 right-1/4 h-1 bg-gradient-to-r from-transparent via-maroc-gold to-transparent opacity-50"></div>
+
+            <!-- Header -->
+            <div class="mb-6">
+                <p class="text-maroc-gold font-serif text-xl mb-1" dir="rtl">عائلة</p>
+                <h1 class="font-oswald text-4xl sm:text-5xl font-semibold tracking-wider text-maroc-gold-light gold-text-glow uppercase">
+                    Sabraoui & Co.
+                </h1>
+                
+                <!-- Trenner mit Stern -->
+                <div class="flex items-center justify-center gap-3 my-5">
+                    <div class="h-[1px] w-12 bg-gradient-to-r from-transparent to-maroc-gold opacity-50"></div>
+                    <svg class="w-5 h-5 text-maroc-green animate-pulse-slow" viewBox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M256 14.316l58.828 181.056h190.41l-154.04 111.91 58.83 181.056-154.028-111.914-154.028 111.914 58.83-181.056-154.04-111.91h190.41z"/>
+                    </svg>
+                    <div class="h-[1px] w-12 bg-gradient-to-l from-transparent to-maroc-gold opacity-50"></div>
+                </div>
+            </div>
+
+            <!-- Text-Bereich -->
+            <div class="space-y-6 text-gray-200 text-sm sm:text-base leading-relaxed">
+                <p class="font-semibold text-white text-lg tracking-wide uppercase">
+                    Das Tippspiel ist beendet 🏁
+                </p>
+                
+                <p>
+                    Liebe Familie, liebe Freunde,<br>
+                    unsere gemeinsame Tippspiel-Reise ist hiermit offiziell am Ende angekommen. Diese App wird ab sofort nicht mehr unterstützt und geht offline.
+                </p>
+
+                <p>
+                    Ich hoffe, ihr hattet alle genauso viel Spaß beim Tippen, Mitfiebern und Diskutieren wie ich. Ein riesiges Dankeschön an jeden Einzelnen von euch für die zahlreiche Teilnahme und die unvergessliche Stimmung!
+                </p>
+
+                <!-- Marokko Spirit -->
+                <div class="bg-maroc-dark/40 rounded-xl p-5 border border-maroc-gold/10 my-6">
+                    <p class="text-maroc-gold font-medium mb-3">
+                        In sha Allah holt sich Marokko diese WM und wir feiern alle zusammen! 🇲🇦🦁
+                    </p>
+                    <p class="font-oswald text-2xl sm:text-3xl text-maroc-green font-bold tracking-widest uppercase">
+                        Sier! Sier! Siiiier!
+                    </p>
+                </div>
+            </div>
+
+            <!-- Großes Made by Ayoub -->
+            <div class="mt-12 pt-8 border-t border-maroc-gold/20 flex flex-col items-center">
+                <span class="text-xs text-maroc-gold/60 mb-1 uppercase tracking-[0.3em] font-oswald">Ein Projekt von</span>
+                <!-- Hier ist die coole große Schriftart -->
+                <h2 class="font-signature text-5xl sm:text-6xl text-maroc-gold-light signature-glow transform -rotate-2 mt-2">
+                    Made by Ayoub
+                </h2>
+            </div>
+
+        </div>
+        
+    </main>
+
+</body>
+</html>
